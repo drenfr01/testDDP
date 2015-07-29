@@ -16,7 +16,7 @@ Workspaces.attachSchema(new SimpleSchema({
     optional: true
   },
   urls: {
-    type: [Object],
+    type: Object,
     label: 'Group of tab objects',
     optional: true,
     blackbox: true
