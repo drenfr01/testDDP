@@ -2,6 +2,10 @@ Workspaces = new Mongo.Collection('workspaces');
 
 //NO updates, just insert new documents
 Workspaces.attachSchema(new SimpleSchema({
+  channelId: {
+    type: String,
+    label: "unique id of channel"
+  },
   name: {
     type: String,
     label: "Topic Name"
@@ -22,7 +26,8 @@ Workspaces.attachSchema(new SimpleSchema({
     label: 'People following channel'
   },
   checkedOut: {
-    type: Boolean,
+    type: Number,
+    allowedValues: [0,1],
     label: 'Is it checked out'
   },
   revisionNumber: {
