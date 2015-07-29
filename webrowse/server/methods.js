@@ -1,16 +1,16 @@
 Meteor.methods({
   addATab: function(message) {
     console.log('method called');
-    Tabs.insert({url: arguments});
+    Tabs.insert({url: attributes});
   },
   addAWorkspace: function() {
-    //TODO: call out parameters above?
+    //var attributes = EJSON.parse(arguments);
     Workspaces.insert({
-      name: arguments.name,
-      about: arguments.about,
-      urls: arguments.url,
-      participants: arguments.participants,
-      checkedOut: arguments.checkedOut
+      name: attributes.name,
+      about: attributes.about,
+      urls: attributes.urls,
+      participants: attributes.participants,
+      checkedOut: attributes.checkedOut
       //todo, there's an autoincrement type
     });
   }

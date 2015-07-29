@@ -7,3 +7,5 @@
 meteor-platform
 aldeed:simple-schema
 aldeed:collection2
+jquery
+iron:router
